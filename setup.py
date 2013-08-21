@@ -26,6 +26,7 @@ setup(
     license='MIT',
     install_requires=[
         'injector >= 0.7.4',
+        'six',
     ],
     zip_safe=False,
     classifiers=[

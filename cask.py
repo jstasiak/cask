@@ -1,8 +1,11 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 
-from injector import Injector
+import sys
 
-__version__ = '0.1.0'
+from injector import Injector
+from six import reraise
+
+__version__ = '0.1.1'
 __all__ = ('Cask',)
 
 
@@ -110,4 +113,4 @@ class Cask(object):
                 handler(e)
                 return
 
-        raise e
+        reraise(*sys.exc_info())
